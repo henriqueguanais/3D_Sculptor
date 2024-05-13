@@ -132,11 +132,11 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
     int ro2 = 0;
     int r2 = radius * radius;
 
-    for (int i = (x0); i <= (x1); i++)
+    for (int i = x0; i <= x1; i++)
     {
-        for (int j = (y0); j <= (y1); j++)
+        for (int j = y0; j <= y1; j++)
         {
-            for (int k = (z0); k <= (z1); k++)
+            for (int k = z0; k <= z1; k++)
             {
                 ro2 = (i - xcenter) * (i - xcenter) + (j - ycenter) * (j - ycenter) + (k - zcenter) * (k - zcenter);
                 if (ro2 <= r2)

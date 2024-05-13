@@ -3,9 +3,9 @@
 
 struct Voxel
 {
-    float r, g, b;
-    float a;
-    bool show;
+    float r, g, b; // Color chanels: red, green and blue.
+    float a;       // Transparency
+    bool show;     // Enable voxel visualization
 };
 
 #endif

@@ -1,5 +1,12 @@
 #include "sculptor.h"
 
+/**
+ * \mainpage 
+ * @brief Projeto Escultor 3D
+ * \authors 
+ * Ramon Vinícius Ferreira de Souza \n
+ * Henrique Antônio Guanais Corneau
+*/
 int main(void)
 {
     Sculptor homer_simpson(100, 105, 100);

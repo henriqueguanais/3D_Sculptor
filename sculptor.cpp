@@ -2,6 +2,13 @@
 #include <fstream>
 #include "sculptor.h"
 
+/**
+ * @brief Construct a new Sculptor:: Sculptor object
+ * 
+ * @param _nx 
+ * @param _ny 
+ * @param _nz 
+ */
 Sculptor::Sculptor(int _nx, int _ny, int _nz)
 {
     nx = _nx;
@@ -28,6 +35,10 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
     }
 }
 
+/**
+ * @brief Destroy the Sculptor:: Sculptor object
+ * 
+ */
 Sculptor::~Sculptor()
 {
     delete[] v[0][0];
@@ -35,6 +46,14 @@ Sculptor::~Sculptor()
     delete[] v;
 }
 
+/**
+ * @brief Define a cor (r, g, b) e a transparência 
+ * 
+ * @param r 
+ * @param g 
+ * @param b 
+ * @param a 
+ */
 void Sculptor::setColor(float r, float g, float b, float a)
 {
     this->r = r;
@@ -43,6 +62,13 @@ void Sculptor::setColor(float r, float g, float b, float a)
     this->a = a;
 }
 
+/**
+ * @brief Cria um único Voxel dentro da matriz
+ * 
+ * @param x 
+ * @param y 
+ * @param z 
+ */
 void Sculptor::putVoxel(int x, int y, int z)
 {
     v[x][y][z].show = true;
@@ -52,11 +78,28 @@ void Sculptor::putVoxel(int x, int y, int z)
     v[x][y][z].a = a;
 }
 
+/**
+ * @brief Retira um único Voxel da matriz
+ * 
+ * @param x 
+ * @param y 
+ * @param z 
+ */
 void Sculptor::cutVoxel(int x, int y, int z)
 {
     v[x][y][z].show = false;
 }
 
+/**
+ * @brief Cria uma caixa sólida na matriz
+ * 
+ * @param x0 
+ * @param x1 
+ * @param y0 
+ * @param y1 
+ * @param z0 
+ * @param z1 
+ */
 void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 {
     for (int i = x0; i <= x1; i++)
@@ -75,6 +118,16 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
     }
 }
 
+/**
+ * @brief Retira uma caixa sólida da matriz
+ * 
+ * @param x0 
+ * @param x1 
+ * @param y0 
+ * @param y1 
+ * @param z0 
+ * @param z1 
+ */
 void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
 {
 
@@ -90,6 +143,14 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
     }
 }
 
+/**
+ * @brief Cria uma esfera sólida na matriz
+ * 
+ * @param xcenter 
+ * @param ycenter 
+ * @param zcenter 
+ * @param radius 
+ */
 void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
     int x0 = xcenter - radius;
@@ -121,6 +182,14 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
     }
 }
 
+/**
+ * @brief Retira uma esfera sólida da matriz
+ * 
+ * @param xcenter 
+ * @param ycenter 
+ * @param zcenter 
+ * @param radius 
+ */
 void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
     int x0 = xcenter - radius;
@@ -148,6 +217,16 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
     }
 }
 
+/**
+ * @brief Cria um elipsóide sólido na matriz
+ * 
+ * @param xcenter 
+ * @param ycenter 
+ * @param zcenter 
+ * @param rx 
+ * @param ry 
+ * @param rz 
+ */
 void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
 {
     int x0 = xcenter - rx;
@@ -178,6 +257,16 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     }
 }
 
+/**
+ * @brief Retira um elipsóide sólido da matriz
+ * 
+ * @param xcenter 
+ * @param ycenter 
+ * @param zcenter 
+ * @param rx 
+ * @param ry 
+ * @param rz 
+ */
 void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
 {
     int x0 = xcenter - rx;
@@ -204,6 +293,11 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     }
 }
 
+/**
+ * @brief Cria um arquivo no formato OFF
+ * 
+ * @param filename 
+ */
 void Sculptor::writeOFF(const char *filename)
 {
     std::ofstream fout;

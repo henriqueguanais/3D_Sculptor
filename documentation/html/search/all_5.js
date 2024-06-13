@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writeoff_0',['writeOFF',['../classSculptor.html#a58cb72d22001a5034f15383ca983830c',1,'Sculptor']]]
+  ['readtxt_0',['readtxt',['../classReadTXT.html',1,'ReadTXT'],['../classReadTXT.html#a868997c4bea15a8b299db044d0a7aa54',1,'ReadTXT::ReadTXT()']]]
 ];

@@ -1,5 +1,13 @@
 #include "cutsphere.h"
 
+/**
+ * @brief Construct a new Cut Sphere:: Cut Sphere object
+ * 
+ * @param xcenter 
+ * @param ycenter 
+ * @param zcenter 
+ * @param radius 
+ */
 CutSphere::CutSphere(int xcenter, int ycenter, int zcenter, int radius) 
 {
     this->x0 = xcenter;
@@ -8,8 +16,17 @@ CutSphere::CutSphere(int xcenter, int ycenter, int zcenter, int radius)
     this->radius = radius;
 }
 
+/**
+ * @brief Destroy the Cut Sphere:: Cut Sphere object
+ * 
+ */
 CutSphere::~CutSphere() {}
 
+/**
+ * @brief Retira uma esfera sólida na matriz
+ * 
+ * @param t 
+ */
 void CutSphere::draw(Sculptor &t) 
 {
     int x = x0 - radius;

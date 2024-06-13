@@ -1,5 +1,18 @@
 #include "putellipsoid.h"
-
+/**
+ * @brief Construct a new Put Ellipsoid:: Put Ellipsoid object
+ * 
+ * @param xcenter 
+ * @param ycenter 
+ * @param zcenter 
+ * @param rx 
+ * @param ry 
+ * @param rz 
+ * @param r 
+ * @param g 
+ * @param b 
+ * @param a 
+ */
 PutEllipsoid::PutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz, float r, float g, float b, float a) 
 {
     this->x0 = xcenter;
@@ -14,8 +27,17 @@ PutEllipsoid::PutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry
     this->a = a;
 }
 
+/**
+ * @brief Destroy the Put Ellipsoid:: Put Ellipsoid object
+ * 
+ */
 PutEllipsoid::~PutEllipsoid() {}
 
+/**
+ * @brief Insere uma Elipse sólida na matriz
+ * 
+ * @param t 
+ */
 void PutEllipsoid::draw(Sculptor &t) 
 {
     int x = x0 - rx;

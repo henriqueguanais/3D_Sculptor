@@ -11,6 +11,11 @@
 #include "putsphere.h"
 #include "putvoxel.h"
 
+/**
+ * @brief Construct a new Read T X T:: Read T X T object
+ * 
+ * @param filename 
+ */
 ReadTXT::ReadTXT(const char* filename) 
 {
     std::ifstream fin;
@@ -105,7 +110,10 @@ ReadTXT::ReadTXT(const char* filename)
     fin.close();
 }
 
-
+/**
+ * @brief Destroy the Read T X T:: Read T X T object
+ * 
+ */
 ReadTXT::~ReadTXT() 
 {
     for (it = vetor.begin(); it != vetor.end(); it++) 
@@ -114,22 +122,42 @@ ReadTXT::~ReadTXT()
     }
 }
 
+/**
+ * @brief Insere na matriz a figura geométrica
+ * 
+ * @param t 
+ */
 void ReadTXT::draw(Sculptor& t) {
     for (auto it : vetor) {
         it->draw(t);
     }
 }
 
+/**
+ * @brief Recupera a dimensão x da matriz
+ * 
+ * @return int 
+ */
 int ReadTXT::getX() 
 {
     return nx; 
 }
 
+/**
+ * @brief Recupera a dimensão y da matriz
+ * 
+ * @return int 
+ */
 int ReadTXT::getY() 
 { 
     return ny; 
 }
 
+/**
+ * @brief Recupera a dimensão z da matriz
+ * 
+ * @return int 
+ */
 int ReadTXT::getZ() 
 { 
     return nz; 

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['sculptor_0',['sculptor',['../index.html',1,'3D Sculptor'],['../classSculptor.html',1,'Sculptor'],['../classSculptor.html#a014e3ef5517bf0e9d9e14486b6ac6433',1,'Sculptor::Sculptor(int _nx, int _ny, int _nz)']]],
-  ['setcolor_1',['setColor',['../classSculptor.html#a4351c930a07887e96d4fdbf251a7867e',1,'Sculptor']]]
+  ['geometricfigure_0',['geometricfigure',['../classGeometricFigure.html',1,'GeometricFigure'],['../classGeometricFigure.html#ab650603d4dd0df6ce8235642e0fdbb20',1,'GeometricFigure::GeometricFigure()']]],
+  ['getx_1',['getX',['../classReadTXT.html#acb9ab271eede040b4ae65da1f8e4296f',1,'ReadTXT']]],
+  ['gety_2',['getY',['../classReadTXT.html#a0fcdb4f96efc2064cf582ea8d58af2e6',1,'ReadTXT']]],
+  ['getz_3',['getZ',['../classReadTXT.html#ab216d81247b7389b12ed51c2dd460ad1',1,'ReadTXT']]]
 ];

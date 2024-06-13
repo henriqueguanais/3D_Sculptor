@@ -1,5 +1,17 @@
 #include "putsphere.h"
 
+/**
+ * @brief Construct a new Put Sphere:: Put Sphere object
+ * 
+ * @param xcenter 
+ * @param ycenter 
+ * @param zcenter 
+ * @param radius 
+ * @param r 
+ * @param g 
+ * @param b 
+ * @param a 
+ */
 PutSphere::PutSphere(int xcenter, int ycenter, int zcenter, int radius, float r, float g, float b, float a) 
 {
     this->x0 = xcenter;
@@ -12,8 +24,17 @@ PutSphere::PutSphere(int xcenter, int ycenter, int zcenter, int radius, float r,
     this->a = a;
 }
 
+/**
+ * @brief Destroy the Put Sphere:: Put Sphere object
+ * 
+ */
 PutSphere::~PutSphere() {}
 
+/**
+ * @brief Insere uma esfera sólida na matriz
+ * 
+ * @param t 
+ */
 void PutSphere::draw(Sculptor &t) 
 {
     int x = x0 - radius;

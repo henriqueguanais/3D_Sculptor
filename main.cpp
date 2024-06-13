@@ -2,6 +2,13 @@
 #include "sculptor.h"
 #include "readtxt.h"
 
+/**
+ * \mainpage
+ * @brief 3D Sculptor
+ * \authors
+ * Ramon Vinícius Ferreira de Souza \n
+ * Henrique Antonio Guanais Corneau
+ */
 int main(void)
 {
     ReadTXT arquivo("../input.txt");

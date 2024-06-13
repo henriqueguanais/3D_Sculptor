@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7esculptor_0',['~Sculptor',['../classSculptor.html#a8f159bf97458326f16d2e238e11be7ff',1,'Sculptor']]]
+  ['readtxt_0',['ReadTXT',['../classReadTXT.html#a868997c4bea15a8b299db044d0a7aa54',1,'ReadTXT']]]
 ];

@@ -1,5 +1,15 @@
 #include "cutellipsoid.h"
 
+/**
+ * @brief Construct a new Cut Ellipsoid:: Cut Ellipsoid object
+ * 
+ * @param xcenter 
+ * @param ycenter 
+ * @param zcenter 
+ * @param rx 
+ * @param ry 
+ * @param rz 
+ */
 CutEllipsoid::CutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz) 
 {
     this->x0 = xcenter;
@@ -10,8 +20,17 @@ CutEllipsoid::CutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry
     this->rz = rz;
 }
 
+/**
+ * @brief Destroy the Cut Ellipsoid:: Cut Ellipsoid object
+ * 
+ */
 CutEllipsoid::~CutEllipsoid() {}
 
+/**
+ * @brief Retira uma Elipse sólida na matriz
+ * 
+ * @param t 
+ */
 void CutEllipsoid::draw(Sculptor &t) 
 {
     int x = x0 - rx;

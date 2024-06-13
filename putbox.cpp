@@ -1,5 +1,19 @@
 #include "putbox.h"
 
+/**
+ * @brief Construct a new Put Box:: Put Box object
+ * 
+ * @param x0 
+ * @param x1 
+ * @param y0 
+ * @param y1 
+ * @param z0 
+ * @param z1 
+ * @param r 
+ * @param g 
+ * @param b 
+ * @param a 
+ */
 PutBox::PutBox(int x0, int x1, int y0, int y1, int z0, int z1, float r, float g, float b, float a) 
 {
     this->x0 = x0;
@@ -14,8 +28,17 @@ PutBox::PutBox(int x0, int x1, int y0, int y1, int z0, int z1, float r, float g,
     this->a = a;
 }
 
+/**
+ * @brief Destroy the Put Box:: Put Box object
+ * 
+ */
 PutBox::~PutBox() {}
 
+/**
+ * @brief Insere uma caixa sólida na matriz
+ * 
+ * @param t 
+ */
 void PutBox::draw(Sculptor &t) 
 {
     for (int i = x0; i <= x1; i++)

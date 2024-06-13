@@ -9,8 +9,23 @@ class GeometricFigure
         float r, g, b, a;
 
     public:
+        /**
+         * @brief Construct a new Geometric Figure object
+         * 
+         */
         GeometricFigure();
+
+        /**
+         * @brief Destroy the Geometric Figure object
+         * 
+         */
         virtual ~GeometricFigure();
+
+        /**
+         * @brief Função draw
+         * 
+         * @param t 
+         */
         virtual void draw(Sculptor &t) = 0;
 };
 
